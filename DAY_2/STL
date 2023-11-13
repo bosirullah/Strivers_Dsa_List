@@ -1,0 +1,30 @@
+C++ STL Tutorial : Most frequent used STL Containers/Algorithms
+
+What is C++ STL?
+C++ is one of the most popular high-level programming language which is used extensively for a long time by developers and has always been loved by all programmers, especially competitive programmers because of its faster execution time.
+
+STL is one of the unique abilities of C++ which makes it stand out from every other programming language. STL stands for standard template library which contains a lot of pre-defined templates in terms of containers and classes which makes it very easy for developers or programmers to implement different data structures easily without having to write complete code and worry about space-time complexities.
+
+If you dive a little deeper into STL, you will have to understand everything about templates and how they work, which is one of the most power full tools when it comes to C++ programming language.
+
+However, in this tutorial we will stick to some of the most popular STL containers and algorithms, and its useful functions which is used by programmers very frequently in day to day programming.
+
+https://takeuforward.org/c/unordered-set-in-c-stl/
+https://takeuforward.org/c/vector-in-c-stl/
+https://takeuforward.org/c/set-in-c-stl/
+https://takeuforward.org/c/c-stl/unordered-multiset-in-c-stl/
+https://takeuforward.org/c/c-stl/multiset-in-c-stl/
+https://takeuforward.org/c/c-stl/unordered_map-in-c-stl/
+https://takeuforward.org/c/c-stl/map-in-c-stl/
+https://takeuforward.org/c/c-stl/unordered_multimap-in-c-stl/
+https://takeuforward.org/c/c-stl/queue-in-c-stl/
+https://takeuforward.org/c/c-stl/stack-in-c-stl/
+https://takeuforward.org/c/c-stl/deque-in-c-stl/
+https://takeuforward.org/c/c-stl/priority_queue-in-c-stl/
+https://takeuforward.org/c/c-stl/multimap-in-c-stl/
+https://takeuforward.org/c/c-stl/list-in-c-stl/
+https://takeuforward.org/c/c-stl/next_permutation-in-c-stl/
+https://takeuforward.org/c/c-stl/builtin-popcount-in-stl-cpp-count-set-bits/
+https://takeuforward.org/c/c-stl/sort-in-c-stl/
+https://takeuforward.org/c/c-stl/min-element-in-c-stl/
+https://takeuforward.org/c/c-stl/max-element-in-c-stl/
