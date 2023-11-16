@@ -1,80 +1,62 @@
 /*
-    Remove Duplicates in-place from Sorted Array
+    Check if an Array is Sorted
 
     Problem Statement:
-    Given an integer array sorted in non-decreasing order, remove the duplicates in place such that each unique element
-    appears only once. The relative order of the elements should be kept the same.
+    Given an array of size n, write a program to check if the given array is sorted in (ascending / Increasing / Non-decreasing) order or not. If the array is sorted then return True, Else return False.
 
-    If there are k elements after removing the duplicates, then the first k elements of the array should hold the final
-    result. It does not matter what you leave beyond the first k elements.
-
-    Note: Return k after placing the final result in the first k slots of the array.
+    Note: Two consecutive equal values are considered to be sorted.
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
 /*
-    Solution 1: Brute Force
+    Solution 1: Using Brute force
 
-    Intuition:
-    We have to think of a data structure that does not store duplicate elements. So can we use a Hash set? Yes! We can.
-    As we know HashSet only stores unique elements.
-
-    Time complexity: O(n*log(n))+O(n)
-    Space Complexity: O(n)
+    Time Complexity: O(N^2)
+    Space Complexity: O(1)
 */
 
-// int removeDuplicates(int arr[], int n)
-// {
-//     set<int> st;
-//     for (int i = 0; i < n; i++)
-//     {
-//         st.insert(arr[i]);
-//     }
+bool isSorted(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[i] > arr[j])
+                return false;
+        }
+    }
 
-//     int k = st.size();
-//     int i = 0;
-//     for (int x : st)
-//     {
-//         arr[i++] = x;
-//     }
-
-//     return k;
-// }
+    return true;
+}
 
 /*
-    Solution 2: Two pointers
-
-    Intuition: We can think of using two pointers ‘i’ and ‘j’, we move ‘j’ till we don’t get a number arr[j] which is
-    different from arr[i]. As we got a unique number we will increase the i pointer and update its value by arr[j].
+    Solution 2: Optimized approach
 
     Time Complexity: O(N)
     Space Complexity: O(1)
 */
 
-int removeDuplicates(int arr[], int n)
+bool isSorted(int arr[], int n)
 {
-    int i = 0;
-    for (int j = 1; j < n; j++)
+    for (int i = 0; i < n - 1; i++)
     {
-        if (arr[i] != arr[j])
-        {
-            i++;
-            arr[i] = arr[j];
-        }
+        if (arr[i] > arr[i + 1])
+            return false;
     }
-    return i + 1;
+
+    return true;
 }
 
 int main()
 {
-    int arr[] = {1, 1, 2, 2, 2, 3, 3};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int k = removeDuplicates(arr, n);
-    cout << "The array after removing duplicate elements is " << endl;
-    for (int i = 0; i < k; i++)
-    {
-        cout << arr[i] << " ";
-    }
+
+    int arr[] = {1, 2, 3, 4, 5}, n = 5;
+    bool ans = isSorted(arr, n);
+    if (ans)
+        cout << "True" << endl;
+    else
+        cout << "False" << endl;
+    return 0;
 }
